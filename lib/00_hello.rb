@@ -1,8 +1,22 @@
 # un programme qui dit Bonjour pour Vald
 
-def say_hello #fonction role affiche "Bonjour poto!"
-  puts "Bonjour poto !"
+def ask_first_name
+  puts "Comment tu t'appelles ?"
+  print ">"
+  first_name = gets.chomp
+  return first_name
+end
+
+def say_hello(first_name) #fonction role affiche "Bonjour poto!"
+  puts "Bonjour #{first_name} !"
 end 
 
-say_hello # pour appeller la fonction
+def perform
+  first_name = ask_first_name
+  say_hello(first_name)
+  
+end
+
+perform
+ # pour appeller la fonction
 
